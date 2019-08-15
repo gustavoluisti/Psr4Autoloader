@@ -1,15 +1,16 @@
 <?php 
-spl_autoload_register(function ($class) {
-    $base_dir = __DIR__.'/pacotes/';
+// spl_autoload_register(function ($class) {
+//     $base_dir = __DIR__.'/pacotes/';
 
-    $file = $base_dir.str_replace('\\', '/', $class).'.php';
+//     $file = $base_dir.str_replace('\\', '/', $class).'.php';
    
-    // echo "FILE: ".$file;
+//     // echo "FILE: ".$file;
 
-    if(file_exists($file)) {
-        require($file);
-    }
-});
+//     if(file_exists($file)) {
+//         require($file);
+//     }
+// });
+require __DIR__.'/vendor/autoload.php';
 
 $clientinfo = new LojaB7Web\Clients\ClientInfo;
 $clientorders = new LojaB7Web\Clients\ClientOrders;
